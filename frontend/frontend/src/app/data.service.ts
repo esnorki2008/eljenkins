@@ -4,7 +4,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class DataService {
-  private REST_API_SERVER = "http://localhost:3000";
+  private REST_API_SERVER = "http://34.68.19.11:3000";
   constructor(private httpClient: HttpClient) { }
   
   public sendPostRequest(a:number,b:number){
