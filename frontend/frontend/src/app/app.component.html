@@ -1,0 +1,26 @@
+<div class="wrapper">
+  <div class="inner">
+    <form action="">
+      <h3>Multiplicacion de dos numeros</h3>
+      <p>Utilizando Jenkins para el CI Practica 1  Andhy Lizandro Solis Osorio 201700886</p>
+      <label class="form-group">
+        <input name="a" type="text" class="form-control" [(ngModel)]="a" required>
+        <span>Primer Numero</span>
+        <span class="border"></span>
+      </label>
+      <label class="form-group">
+        <input name="b" type="text" class="form-control" [(ngModel)]="b" required>
+        <span for="">Segundo Numero</span>
+        <span class="border"></span>
+      </label>
+      <label class="form-group" >
+        <textarea name="result1" id="" class="form-control" [(ngModel)]="result" required></textarea>
+        <span for="">Resultado</span>
+        <span class="border"></span>
+      </label>
+      <button type="button" (click)="mult()">Multiplicar
+        <i class="zmdi zmdi-arrow-right"></i>
+      </button>
+    </form>
+  </div>
+</div>
