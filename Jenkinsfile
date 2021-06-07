@@ -1,19 +1,7 @@
 pipeline {
     agent any
     
-    stage('Test') {
-            agent {
-                label 'master'
-            } 
-            steps {
-                echo 'Prueba en el backend utilizando mocha'
-                dir('backend'){
-                    sh 'npm install'
-                    sh 'npm test'
-                }
-                echo 'Prueba finalizada'
-            }
-        }
+    
 
     stages {
         stage('Build') { 
@@ -29,8 +17,21 @@ pipeline {
         }
     
         
-    
-        stage('Deploy') { 
+    stage('Test') {
+            agent {
+                label 'master'
+            } 
+            steps {
+                echo 'Prueba en el backend utilizando mocha'
+                dir('backend'){
+                    sh 'npm install'
+                    sh 'npm test'
+                }
+                echo 'Prueba finalizada'
+            }
+        }
+
+    stage('Deploy') { 
             
             agent {
                 label 'master'
