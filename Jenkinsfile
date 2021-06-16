@@ -35,7 +35,6 @@ pipeline {
                 label 'master'
             }
             steps {
-                sh 'export PATH="$HOME/.local/bin:$PATH"'
                 sh 'fab -H localhost -p 2014  CD'
                 echo 'Servidores finalizados con fabric' 
             }
