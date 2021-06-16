@@ -36,7 +36,7 @@ pipeline {
             }
             steps {
                 sh 'pip3 install fabric3'
-                sh 'fab -H localhost -p 2014  CD'
+                sh '/home/norki/.local/bin/fab -H localhost -p 2014  CD'
                 echo 'Servidores finalizados con fabric' 
             }
         }
