@@ -35,9 +35,9 @@ pipeline {
                 label 'master'
             }
             steps {
-                echo 'Iniciando Servidores'
-                sh 'docker-compose up -d'
-                echo 'Servidores finalizados'
+                echo 'Iniciando Servidores con fabric'
+                sh 'fab -H localhost -p 2014  CD'
+                echo 'Servidores finalizados con fabric' 
             }
         }
     }
